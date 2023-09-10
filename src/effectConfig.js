@@ -49,7 +49,6 @@ module.exports = {
       id: "strength",
       value: 16,
       uniform: "uStrength",
-      // precision: "lowp" // defaults to lowp if omitted
       interpolatable: true,
       name: "Strength",
       desc: "Strength",
@@ -59,7 +58,6 @@ module.exports = {
       id: "add_or_multiply",
       value: 0,
       uniform: "uAddOrMultiply",
-      // precision: "lowp" // defaults to lowp if omitted
       interpolatable: true,
       name: "Add or Multiply",
       desc: "0: Add, 1: Multiply",
