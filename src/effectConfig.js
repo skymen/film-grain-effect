@@ -2,8 +2,8 @@
 module.exports = {
   addonType: "effect",
   id: "skymen_film_grain",
-  name: "film_grain",
-  version: "1.0.0.2",
+  name: "Film Grain",
+  version: "1.0.0.3",
   category:
     // "blend",
     // "distortion",
