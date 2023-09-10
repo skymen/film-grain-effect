@@ -3,7 +3,7 @@ module.exports = {
   addonType: "effect",
   id: "skymen_film_grain",
   name: "film_grain",
-  version: "1.0.0.0",
+  version: "1.0.0.1",
   category:
     // "blend",
     // "distortion",
@@ -20,7 +20,7 @@ module.exports = {
   usesDepth: false,
   crossSampling: false,
   preservesOpaqueness: true,
-  animated: false,
+  animated: true,
   mustPredraw: false,
   extendBox: {
     horizontal: 0,

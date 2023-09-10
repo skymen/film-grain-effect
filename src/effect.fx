@@ -36,7 +36,7 @@ void main(void)
 {
   vec4 color = texture2D(samplerFront, vTex);
 	vec2 uv =	(vTex - srcStart) / (srcEnd - srcStart);
-  float x = (uv.x + 4.0 ) * (uv.y + 4.0 ) * (seconds * 10.0);
+  float x = (uv.x + 4.0 ) * (uv.y + 4.0 ) * ((seconds + 1.0) * 10.0);
 	vec4 grain = vec4(mod((mod(x, 13.0) + 1.0) * (mod(x, 123.0) + 1.0), 0.01)-0.005) * uStrength;
-	gl_FragColor = mix(color + grain, color * grain, uAddOrMultiply);
+	gl_FragColor = mix(color + grain, color * (1.0 - grain), uAddOrMultiply);
 }

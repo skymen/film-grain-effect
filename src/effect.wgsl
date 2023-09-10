@@ -90,8 +90,8 @@ fn main(input : FragmentInput) -> FragmentOutput
 	var output : FragmentOutput;
 	var color : vec4<f32> = textureSample(textureFront, samplerFront, input.fragUV);
 	var uv : vec2<f32> =	(input.fragUV - c3Params.srcStart) / (c3Params.srcEnd - c3Params.srcStart);
-	var x : f32 = (uv.x + 4.0 ) * (uv.y + 4.0 ) * (c3Params.seconds * 10.0);
+	var x : f32 = (uv.x + 4.0 ) * (uv.y + 4.0 ) * ((c3Params.seconds + 1.0)) * 10.0);
 	var grain : vec4<f32> = vec4((((x % 13.0) + 1.0) * ((x % 123.0) + 1.0) % 0.01)-0.005) * shaderParams.uStrength;
-	output.color = mix(color + grain, color * grain, shaderParams.uAddOrMultiply);
+	output.color = mix(color + grain, color * (1.0 - grain), shaderParams.uAddOrMultiply);
 	return output;
 }
